@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace pirmas
 {
-    class PakruojisShop
+    class PakruojisDraft
     {
         private static IWebDriver _driver;
 
@@ -33,31 +33,29 @@ namespace pirmas
         [OneTimeTearDown]
         public static void TearDown()
         {
-           // _driver.Quit();
+            _driver.Quit();
         }
+
+
 
 
         [Test]
         public static void BuyThings()
         {
+            _driver.FindElement(By.CssSelector("body > header > div.wrapper > div > div.right-side > div.burger")).Click();
+
 
             /*
             _driver.FindElement(By.XPath("body")).Click();
             _driver.FindElement(By.XPath("/html/body")).Click();
-            */
-
             _driver.FindElement(By.CssSelector("#menu-item-913 > a")).Click();
-
-            /*
             _driver.FindElement(By.XPath("/html/body/div[5]/div/div[2]/div[3]/a[1]")).Click();
-            _driver.FindElement(By.XPath("/html/body/div[3]/div/ul/li[2]/div/div/a")).Click();
-            _driver.FindElement(By.XPath("/html/body/div[5]/div/div[2]/div[3]/a[1]")).Click();
-            _driver.FindElement(By.XPath("/html/body/header/div[1]/div/div[2]/a")).Click();
-            _driver.FindElement(By.XPath("/html/body/div[3]/div/div/form/div[2]/a")).Click();
             */
-
 
         }
+
     }
+
 }
+    
 

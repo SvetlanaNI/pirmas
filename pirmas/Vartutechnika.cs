@@ -48,9 +48,9 @@ namespace pirmas
              IWebElement autoCheckBox = _driver.FindElement(By.Id("automatika"));
             if (automatika != autoCheckBox.Selected)
                 autoCheckBox.Click();
-             IWebElement MontavimoCheckBox = _driver.FindElement(By.Id("darbai"));
-            if (montavimoDarbai != MontavimoCheckBox.Selected)
-                MontavimoCheckBox.Click();
+             IWebElement montavimoCheckBox = _driver.FindElement(By.Id("darbai"));
+            if (montavimoDarbai != montavimoCheckBox.Selected)
+                montavimoCheckBox.Click();
             _driver.FindElement(By.Id("calc_submit")).Click();
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
             wait.Until(d => d.FindElement(By.CssSelector("#calc_result>div")).Displayed);

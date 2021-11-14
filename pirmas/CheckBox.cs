@@ -37,12 +37,13 @@ namespace pirmas
         }
 
         [Test]
-        public static void TestMultipleCheckbox()
+        public static void TestMultipleCheckbox1()
         {
             IWebElement firstCheckbox = _driver.FindElement(By.Id("isAgeSelected"));
             if (firstCheckbox.Selected)
                 firstCheckbox.Click();
             IReadOnlyCollection<IWebElement> multipleCheckBoxList = _driver.FindElements(By.CssSelector(".cb1-element"));
+
             foreach (IWebElement element in multipleCheckBoxList)
             {
                 element.Click();
@@ -53,7 +54,7 @@ namespace pirmas
         }
 
         [Test]
-        public static void TestLastCheckbox()
+        public static void TestMultipleCheckbox3()
         {
             IWebElement button = _driver.FindElement(By.Id("check1"));
             if (button.GetAttribute("value") == "Uncheck All")
