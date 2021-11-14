@@ -24,7 +24,7 @@ namespace pirmas.Test
         [OneTimeTearDown]
         public static void TearDown()
         {
-            _page.CloseBrowser();
+           // _page.CloseBrowser();
         }
 
 

@@ -71,7 +71,6 @@
     <Compile Include="Page\PakruojisShopPage1.cs" />
     <Compile Include="Page\PakruojisShopPage2.cs" />
     <Compile Include="Page\PakruojisShopPage3.cs" />
-    <Compile Include="Page\SeleniumCheckBoxNamePage.cs" />
     <Compile Include="Page\SeleniumInputPage.cs" />
     <Compile Include="Page\VartuTechnikaPage.cs" />
     <Compile Include="PakruojisDraft.cs" />
@@ -82,7 +81,6 @@
     <Compile Include="Test\DropDownTest.cs" />
     <Compile Include="Test\ND4Test.cs" />
     <Compile Include="Test\PakruojisShopTest.cs" />
-    <Compile Include="Test\SeleniumCheckBoxTest.cs" />
     <Compile Include="Test\SeleniumInputTest.cs" />
     <Compile Include="Test\VartuTechnikaTest.cs" />
     <Compile Include="Vartutechnika.cs" />
