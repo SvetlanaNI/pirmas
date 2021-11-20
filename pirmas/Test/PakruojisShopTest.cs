@@ -22,7 +22,6 @@ namespace pirmas.Test
                 .StartBuying();
             _pakruojisShopSecondPage.NavigateToDefaultPage()
                 .ClickPlate();
-                
         }
         
         [Test]

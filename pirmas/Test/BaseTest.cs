@@ -39,14 +39,9 @@ namespace pirmas.Test
             Thread.Sleep(5000);
             cookie.Click();
 
-            /*  private IWebElement _popUp => Driver.FindElement(By.CssSelector("body > div.alcohol-notice.show > div.popup-container > div.notice-wrapper > div.button-wrapper > button.border-button.yes")); //kur taip 20 metu
-          WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
-          private IWebElement _sutikimas => Driver.FindElement(By.CssSelector("body > div.alcohol-notice.show > div.popup-container > div.notice-wrapper > div.button-wrapper > button.border-button.yes"));
-          WebDriverWait _wait1 = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
-          private IWebElement _cookie => Driver.FindElement(By.XPath("/html/body/div[4]/div/div/div[2]/button"));*/
-
             // _dropDownPage = new DropDownPage(driver);
             // _vartuTechnikaPage = new VartuTechnikaPage(driver);
+
             _pakruojisShopMainPage = new PakruojisShopMainPage(driver);
             _pakruojisShopSecondPage = new PakruojisShopSecondPage(driver);
             _pakruojisShopThirdPage = new PakruojisShopThirdPage(driver);
