@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
+using pirmas.Page;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,41 +11,95 @@ using System.Threading.Tasks;
 
 namespace pirmas.Test
 {
-    public class PakruojisShopTest
+    class PakruojisShopTest : BaseTest
     {
-        private static IWebDriver _driver;
-
-
-        [OneTimeSetUp]
-        public static void SetUp()
+      
+        
+        [Test]
+        public void CheckOneThing()
         {
-            _driver = new ChromeDriver();
-            _driver.Navigate().GoToUrl("https://parduotuve.pakruojo-dvaras.lt/");
-            _driver.Manage().Window.Maximize();
+            _pakruojisShopMainPage.NavigateToDefaultPage()
+                .StartBuying();
+            _pakruojisShopSecondPage.NavigateToDefaultPage()
+                .ClickPlate();
+                
+        }
+        
+        [Test]
+        public void CheckTwoThings()
+        {
+            _pakruojisShopMainPage.NavigateToDefaultPage()
+                .StartBuying();
+            _pakruojisShopSecondPage.NavigateToDefaultPage()
+                .ClickPlate()
+                .ClickContinue()
+                .ClickSpirit();
+            _pakruojisShopThirdPage.NavigateToDefaultPage()
+                .ClickKlevu();
+        }
+        
+        [Test]
+        public void CheckDeliveryPriceOfPlate()
+        {
+            _pakruojisShopMainPage.NavigateToDefaultPage()
+                .StartBuying();
+            _pakruojisShopSecondPage.NavigateToDefaultPage()
+                .ClickPlate()
+                .ClickIKrepseli()
+                .ClickNext();
+            _pakruojisShopLastPage.NavigateToDefaultPage()
+                .CheckPristatymas();
+        }
+        
+        [Test]
+        public void CheckDeliveryPriceOfMapleBitter()
+        {
+            _pakruojisShopMainPage.NavigateToDefaultPage()
+                .StartBuying();
+            _pakruojisShopSecondPage.NavigateToDefaultPage()
+                .ClickSpirit();
+            _pakruojisShopThirdPage.NavigateToDefaultPage()
+                .ClickKlevu()
+                .ClickBuyingAllThings();
+            _pakruojisShopFourthPage.NavigateToDefaultPage()
+                .Toliau();
+            _pakruojisShopLastPage.NavigateToDefaultPage()
+                .CheckPristatymas();
+        }
+        
+        [Test]
+        public void CheckSumBuyingPlate()
+        {
+            _pakruojisShopMainPage.NavigateToDefaultPage()
+               .StartBuying();
+            _pakruojisShopSecondPage.NavigateToDefaultPage()
+                .ClickPlate()
+                .ClickIKrepseli()
+                .ClickNext();
+            _pakruojisShopLastPage.NavigateToDefaultPage()
+                .WaitForSum();
+         }
 
-
-            IWebElement popUp = _driver.FindElement(By.CssSelector("body > div.alcohol-notice.show > div.popup-container > div.notice-wrapper > div.button-wrapper > button.border-button.yes")); //kur taip 20 metu
-            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
-            wait.Until(d => popUp.Displayed);
-            popUp.Click();
-
-
-            IWebElement sutikimas = _driver.FindElement(By.CssSelector("body > div.cookies - message.show > div > div > div.button - wrapper > button"));
-            WebDriverWait wait1 = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
-            wait1.Until(d => sutikimas.Displayed);
-            sutikimas.Click();
-
-            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            _driver.FindElement(By.CssSelector("#cookie-notice > div > div > button > span")).Click();
+        [Test]
+        public void CheckSumBuyingKlevu()
+        {
+            _pakruojisShopMainPage.NavigateToDefaultPage()
+                .StartBuying();
+            _pakruojisShopSecondPage.NavigateToDefaultPage()
+               .ClickSpirit();
+            _pakruojisShopThirdPage.NavigateToDefaultPage()
+                .ClickKlevu()
+                .ClickBuyingAllThings();
+            _pakruojisShopFourthPage.NavigateToDefaultPage()
+                .Toliau();
+            _pakruojisShopLastPage.NavigateToDefaultPage()
+                .WaitForSum();
 
         }
 
-        [OneTimeTearDown]
-        public static void TearDown()
-        {
-            // _driver.Quit(); 
-        }
+            
     }
 }
+
     
 

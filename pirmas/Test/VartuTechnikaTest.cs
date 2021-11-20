@@ -11,27 +11,9 @@ using System.Threading.Tasks;
 
 namespace pirmas.Test
 {
-    public class VartuTechnikaTest
+   /* public class VartuTechnikaTest : BaseTest
     {
-        private static IWebDriver _driver;
-
-         [OneTimeSetUp]
-         public static void SetUp()
-        {
-            _driver = new ChromeDriver();
-            _driver.Url = "https://vartutechnika.lt/";
-            IWebElement popUp = _driver.FindElement(By.Id("at-cv-lightbox-close"));
-            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
-            _driver.Manage().Window.Maximize();
-            _driver.FindElement(By.Id("cookiescript_reject")).Click();
-
-        }
-
-        [OneTimeTearDown]
-        public static void TearDown()
-        {
-            // _driver.Quit();
-        }
+       
 
         [TestCase("2000", "2000", true, false, "665.98", TestName = "2000 * 2000 + Vartu automatika = 665.98Eur")]
         [TestCase("4000", "2000", true, true, "1006.43", TestName = "4000 + 2000 + Vartu automatika + Vartu montavimo darbai" +
@@ -41,8 +23,8 @@ namespace pirmas.Test
 
         public void TestVartuTechnika(string width, string height, bool automatika, bool montavimoDarbai, string result)
         {
-            VartuTechnikaPage page = new VartuTechnikaPage(_driver);
-            page.InsertWidthAndHeight(width, height)
+            _vartuTechnikaPage.NavigateToDefaultPage().
+            InsertWidthAndHeight(width, height)
             .CheckAutomatikCheckbox(automatika)
             .CheckMontavimoDarbaiCheckBox(montavimoDarbai)
             .ClickCalculateButton()
@@ -51,4 +33,5 @@ namespace pirmas.Test
 
 
     }
+   */
 }

@@ -18,7 +18,7 @@ namespace pirmas.Page
 
         public void CloseBrowser()
         {
-            Driver.Quit();
+           // Driver.Quit();
         }
     }
 }
