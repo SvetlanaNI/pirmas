@@ -31,8 +31,6 @@ namespace pirmas.Page
         }
        
 
-
-
         public PakruojisShopSecondPage ClickPlate()
         {
             _lekste.Click();

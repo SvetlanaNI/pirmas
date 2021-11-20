@@ -26,8 +26,8 @@ namespace pirmas.Page
             if (Driver.Url != PageAddress)
                 Driver.Url = PageAddress;
             return this;
-
         }
+
         
         public PakruojisShopThirdPage ClickKlevu()
         {

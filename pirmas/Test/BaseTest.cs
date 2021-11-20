@@ -17,8 +17,10 @@ namespace pirmas.Test
     public class BaseTest
     {
         public static IWebDriver driver;
+
        //public static DropDownPage _dropDownPage;
        //public static VartuTechnikaPage _vartuTechnikaPage;
+
         public static PakruojisShopMainPage _pakruojisShopMainPage;
         public static PakruojisShopSecondPage _pakruojisShopSecondPage;
         public static PakruojisShopThirdPage _pakruojisShopThirdPage;

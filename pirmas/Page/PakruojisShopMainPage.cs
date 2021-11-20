@@ -25,10 +25,7 @@ namespace pirmas.Page
         private IWebElement _visosPrekes => Driver.FindElement(By.CssSelector("#menu-item-503 > a"));
         
 
-        
-
-
-        public PakruojisShopMainPage(IWebDriver webdriver) : base(webdriver)
+         public PakruojisShopMainPage(IWebDriver webdriver) : base(webdriver)
         {
             Driver.Url = PageAddress;
         }
