@@ -65,6 +65,7 @@
     <Compile Include="ND.cs" />
     <Compile Include="Demo.cs" />
     <Compile Include="NDoptimizuoti.cs" />
+    <Compile Include="Page\AlertPage.cs" />
     <Compile Include="Page\BasePage.cs" />
     <Compile Include="Page\CheckBoxDemoPage.cs" />
     <Compile Include="Page\DropDownPage.cs" />
@@ -74,7 +75,9 @@
     <Compile Include="Page\PakruojisShopThird.Page.cs" />
     <Compile Include="Page\PakruojisShopFourthPage.cs" />
     <Compile Include="Page\PakruojisShopLastPage.cs" />
+    <Compile Include="Page\SebPage.cs" />
     <Compile Include="Page\SeleniumInputPage.cs" />
+    <Compile Include="Page\SenukaiPage.cs" />
     <Compile Include="Page\VartuTechnikaPage.cs" />
     <Compile Include="PakruojisDraft.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,7 +87,9 @@
     <Compile Include="Test\DropDownTest.cs" />
     <Compile Include="Test\ND4Test.cs" />
     <Compile Include="Test\PakruojisShopTest.cs" />
+    <Compile Include="Test\SebTest.cs" />
     <Compile Include="Test\SeleniumInputTest.cs" />
+    <Compile Include="Test\SenukaiTest.cs" />
     <Compile Include="Test\VartuTechnikaTest.cs" />
     <Compile Include="Tools\MyScreenshot.cs" />
     <Compile Include="Vartutechnika.cs" />

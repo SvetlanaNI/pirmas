@@ -47,7 +47,7 @@ namespace pirmas.Page
             return this;
         }
 
-        public PakruojisShopSecondPage ClickIKrepseli()
+        public PakruojisShopSecondPage ClickIntoBasket()
         {
             _iKrepseli.Click();
             return this;

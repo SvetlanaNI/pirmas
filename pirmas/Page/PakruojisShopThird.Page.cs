@@ -14,7 +14,10 @@ namespace pirmas.Page
         private const string PageAddress = "https://parduotuve.pakruojo-dvaras.lt/produkto-kategorija/spirito-varykla/";
         private IWebElement _klevuTrauktine => Driver.FindElement(By.XPath("/html/body/div[3]/div/ul/li[7]/div/div/a"));
         private IWebElement _eitiIKrepseli => Driver.FindElement(By.CssSelector(".xoo-cp-btn-vc"));
-      
+        
+        
+        
+
 
         public PakruojisShopThirdPage(IWebDriver webdriver) : base(webdriver)
         {
@@ -29,7 +32,7 @@ namespace pirmas.Page
         }
 
         
-        public PakruojisShopThirdPage ClickKlevu()
+        public PakruojisShopThirdPage ClickMaple()
         {
             _klevuTrauktine.Click();
             return this;

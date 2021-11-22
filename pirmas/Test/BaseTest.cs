@@ -20,6 +20,9 @@ namespace pirmas.Test
 
        //public static DropDownPage _dropDownPage;
        //public static VartuTechnikaPage _vartuTechnikaPage;
+       //public static SebPage _sebPage;
+       //public static SenukaiPage _senukaiPage;
+       //public static AlertPage _alertPage;
 
         public static PakruojisShopMainPage _pakruojisShopMainPage;
         public static PakruojisShopSecondPage _pakruojisShopSecondPage;
@@ -32,6 +35,8 @@ namespace pirmas.Test
         public static void SetUp()
         {
             driver = CustomDriver.GetChromeDriver();
+           // driver = CustomDriver.GetIncognitoChrome();
+
             driver.Navigate().GoToUrl("https://parduotuve.pakruojo-dvaras.lt/");
 
             driver.FindElement(By.CssSelector("body > div.alcohol-notice.show > div.popup-container > div.notice-wrapper"));
@@ -43,6 +48,9 @@ namespace pirmas.Test
 
             // _dropDownPage = new DropDownPage(driver);
             // _vartuTechnikaPage = new VartuTechnikaPage(driver);
+            // _sebPage = new SebPage(driver);
+            // _senukaiPage = new SenukaiPage(driver);
+            // _alertPage = new AlertPage(driver);
 
             _pakruojisShopMainPage = new PakruojisShopMainPage(driver);
             _pakruojisShopSecondPage = new PakruojisShopSecondPage(driver);

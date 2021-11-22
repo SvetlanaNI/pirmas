@@ -36,7 +36,7 @@ namespace pirmas.Page
         }
         
         
-        public PakruojisShopLastPage CheckPristatymas()
+        public PakruojisShopLastPage CheckDelivery()
         {
             WebDriverWait wait2 = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
             wait2.Until(d => _pristatymas.Displayed);

@@ -29,12 +29,12 @@ namespace pirmas.Test
         {
             _pakruojisShopMainPage.NavigateToDefaultPage()
                 .StartBuying();
-            _pakruojisShopSecondPage.NavigateToDefaultPage()
+            _pakruojisShopSecondPage
                 .ClickPlate()
                 .ClickContinue()
                 .ClickSpirit();
-            _pakruojisShopThirdPage.NavigateToDefaultPage()
-                .ClickKlevu();
+            _pakruojisShopThirdPage
+                .ClickMaple();
         }
         
         [Test]
@@ -44,10 +44,10 @@ namespace pirmas.Test
                 .StartBuying();
             _pakruojisShopSecondPage.NavigateToDefaultPage()
                 .ClickPlate()
-                .ClickIKrepseli()
+                .ClickIntoBasket()
                 .ClickNext();
             _pakruojisShopLastPage.NavigateToDefaultPage()
-                .CheckPristatymas();
+                .CheckDelivery();
         }
         
         [Test]
@@ -55,15 +55,15 @@ namespace pirmas.Test
         {
             _pakruojisShopMainPage.NavigateToDefaultPage()
                 .StartBuying();
-            _pakruojisShopSecondPage.NavigateToDefaultPage()
+            _pakruojisShopSecondPage
                 .ClickSpirit();
-            _pakruojisShopThirdPage.NavigateToDefaultPage()
-                .ClickKlevu()
+            _pakruojisShopThirdPage
+                .ClickMaple()
                 .ClickBuyingAllThings();
-            _pakruojisShopFourthPage.NavigateToDefaultPage()
-                .Toliau();
-            _pakruojisShopLastPage.NavigateToDefaultPage()
-                .CheckPristatymas();
+            _pakruojisShopFourthPage
+                .Next();
+            _pakruojisShopLastPage
+                .CheckDelivery();
         }
         
         [Test]
@@ -73,7 +73,7 @@ namespace pirmas.Test
                .StartBuying();
             _pakruojisShopSecondPage.NavigateToDefaultPage()
                 .ClickPlate()
-                .ClickIKrepseli()
+                .ClickIntoBasket()
                 .ClickNext();
             _pakruojisShopLastPage.NavigateToDefaultPage()
                 .WaitForSum();
@@ -87,18 +87,17 @@ namespace pirmas.Test
             _pakruojisShopSecondPage.NavigateToDefaultPage()
                .ClickSpirit();
             _pakruojisShopThirdPage.NavigateToDefaultPage()
-                .ClickKlevu()
+                .ClickMaple()
                 .ClickBuyingAllThings();
             _pakruojisShopFourthPage.NavigateToDefaultPage()
-                .Toliau();
+                .Next();
             _pakruojisShopLastPage.NavigateToDefaultPage()
                 .WaitForSum();
-
         }
-
-            
+        
     }
 }
+
 
     
 
