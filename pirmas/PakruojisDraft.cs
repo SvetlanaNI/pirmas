@@ -50,9 +50,9 @@ namespace pirmas
             _driver.FindElement(By.XPath("/html/body")).Click();
             */
             _driver.FindElement(By.CssSelector("#menu-item-913 > a")).Click();
-            /*
-            _driver.FindElement(By.XPath("/html/body/div[5]/div/div[2]/div[3]/a[1]")).Click();
-            */
+            
+           // _driver.FindElement(By.XPath("/html/body/div[5]/div/div[2]/div[3]/a[1]")).Click();
+            
 
         }
 

@@ -12,7 +12,8 @@ namespace pirmas.Page
     {
         private const string PageAddress = "https://parduotuve.pakruojo-dvaras.lt/krepselis/";
         private IWebElement _toliau => Driver.FindElement(By.CssSelector(".next-step > .button"));
-        
+        private IWebElement _krepselis => Driver.FindElement(By.XPath("/html/body/header/div[1]/div/div[2]/a"));
+
         public PakruojisShopFourthPage(IWebDriver webdriver) : base(webdriver)
         {
             Driver.Url = PageAddress;
@@ -31,6 +32,13 @@ namespace pirmas.Page
             _toliau.Click();
             return this;
         }
+        public PakruojisShopFourthPage Basket()
+        {
+            _krepselis.Click();
+            return this;
+
+        }
+
         
         
     }

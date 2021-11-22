@@ -94,7 +94,55 @@ namespace pirmas.Test
             _pakruojisShopLastPage.NavigateToDefaultPage()
                 .WaitForSum();
         }
-        
+        [Test]
+        public void CheckBasket()
+        {
+            _pakruojisShopMainPage.NavigateToDefaultPage()
+                .StartBuying();
+            _pakruojisShopSecondPage
+                .ClickPlate()
+                .ClickContinue()
+                .ClickSpirit();
+            _pakruojisShopThirdPage
+                .ClickMaple();
+            _pakruojisShopFourthPage
+                .Basket();
+        }
+        [Test]
+        public void CheckSumOfTwoThings()
+        {
+            _pakruojisShopMainPage.NavigateToDefaultPage()
+               .StartBuying();
+            _pakruojisShopSecondPage
+                .ClickPlate()
+                .ClickContinue()
+                .ClickSpirit();
+            _pakruojisShopThirdPage
+                .ClickMaple();
+            _pakruojisShopFourthPage
+                .Basket()
+                .Next();
+            _pakruojisShopLastPage
+                .WaitForSum();
+        }
+        [Test]
+        public void CheckSumOfTwoThingsOther()
+        {
+            _pakruojisShopMainPage.NavigateToDefaultPage()
+               .StartBuying();
+            _pakruojisShopSecondPage.NavigateToDefaultPage()
+                .ClickPlate()
+                .ClickContinue()
+                .ClickSpirit();
+            _pakruojisShopThirdPage.NavigateToDefaultPage()
+                .ClickMaple();
+            _pakruojisShopFourthPage.NavigateToDefaultPage()
+                .Basket()
+                .Next();
+            _pakruojisShopLastPage.NavigateToDefaultPage()
+                .WaitForSum();
+        }
+
     }
 }
 
